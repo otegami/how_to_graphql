@@ -2,7 +2,8 @@ require 'test_helper'
 
 class Mutations::SignInUserTest < ActiveSupport::TestCase
   def perform(**args)
-    Mutations::SignInUser.new(object: nil, field: nil, context: {}).resolve(**args)
+    context = { session: { token: nil }, current_user: nil}
+    Mutations::SignInUser.new(object: nil, field: nil, context: context).resolve(**args)
   end
 
   def create_user
