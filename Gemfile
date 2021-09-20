@@ -12,6 +12,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'graphql'
 gem 'pry'
 gem 'bcrypt'
+gem 'search_object_graphql'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
